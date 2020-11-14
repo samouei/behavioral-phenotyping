@@ -1,10 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Mon Oct 12 18:56:38 2020
-
-@author: Shirin
-"""
 
 from pytube import YouTube 
 
