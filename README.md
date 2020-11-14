@@ -1,11 +1,5 @@
 # behavioral-phenotyping
 
-
-[![MIT License][license-shield]][https://opensource.org/licenses/MIT]
-
-
-
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
@@ -21,11 +15,6 @@
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
   </p>
 </p>
 
