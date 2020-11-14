@@ -49,6 +49,8 @@ To get a local copy up and running follow these simple steps.
 ### Prerequisites
 
 * pytube
+* pydub
+* ffmpeg
 
 
 ### Installation
@@ -61,7 +63,12 @@ git clone https://github.com/samouei/behavioral-phenotyping.git
 ```sh
 pip install pytube
 ```
-
+```sh
+pip install pydub
+```
+```sh
+brew install ffmpeg
+```
 
 <!-- LICENSE -->
 ## License
