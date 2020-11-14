@@ -9,9 +9,8 @@
   <h3 align="center">Behavioral Phenotyping</h3>
 
   <p align="center">
-    Behavioral Phenotyping in Children 
+    Identifying Behavioral Patterns in Children with NLP
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
     <br />
   </p>
