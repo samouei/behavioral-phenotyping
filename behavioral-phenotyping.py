@@ -2,8 +2,10 @@
 # -*- coding: utf-8 -*-
 
 from pytube import YouTube 
+import os
 
 
+# 1.
 #### Getting Video ####
 def download_video(link):
     '''
@@ -27,6 +29,19 @@ def download_video(link):
     print(f"'{video_title}' was downloaded successfully.")
 
 
+# 2.
+#### Preprocessing Video #### 
+def get_video_filepath(video_name):
+    '''
+    Gets the local file path for a video.
+    Input: video_name.mp4 as a string.
+    Returns: file path (string)
+    Method: os module
+    '''  
+    # import os
+    
+    video_filepath = os.path.abspath(video_name)   
+    return video_filepath
 
 
 
