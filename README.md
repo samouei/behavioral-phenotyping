@@ -42,7 +42,7 @@ Remote Behavioral Phenotyping using Natural Language Processing
 
 ### Built With
 
-* (Python)
+* Python
 
 
 
