@@ -6,7 +6,7 @@
   <h3 align="center">Behavioral Phenotyping</h3>
 
   <p align="center">
-    Remote Behavioral Phenotyping in Children Using NLP
+    Remote Behavioral Analysis of Children Using NLP
     <br />
     <br />
     <br />
