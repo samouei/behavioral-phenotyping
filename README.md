@@ -3,7 +3,7 @@
 <br />
 <p align="center">
 
-  <h3 align="center">Behavioral Phenotyping</h3>
+  <h1 align="center">Behavioral Phenotyping</h1>
 
   <p align="center">
     Remote Behavioral Analysis of Children Using NLP
@@ -55,7 +55,7 @@ To get a local copy up and running follow these simple steps.
 
 1. Clone the repo
 ```sh
-git clone https://github.com/github_username/repo_name.git
+git clone https://github.com/samouei/behavioral-phenotyping.git
 ```
 2. Install packages
 ```sh
