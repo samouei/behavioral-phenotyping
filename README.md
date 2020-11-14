@@ -10,7 +10,7 @@
   <h3 align="center">YOUR_TITLE</h3>
 
   <p align="center">
-    YOUR_SHORT_DESCRIPTION
+    Behavioral Phenotyping in Children 
     <br />
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
