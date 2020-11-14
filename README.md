@@ -1,4 +1,3 @@
-# behavioral-phenotyping
 
 <!-- PROJECT LOGO -->
 <br />
