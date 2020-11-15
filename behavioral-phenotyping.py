@@ -5,6 +5,7 @@ from pytube import YouTube
 import os
 from pydub.utils import mediainfo
 import subprocess
+import math
 
 
 # 1.
@@ -75,6 +76,42 @@ def video_to_audio(video_name, audio_name):
     subprocess.call(command, shell = True)
     
     print(f"'{video_name}' was converted to audio successfully.")
+
+
+def split_audio(audio_name, duration, copy_directory, interval):
+    '''
+    Splits audio into intervals.
+    Input: audio_name.mp3 as a string
+           duration (int?)
+           copy_directory
+           interval (seconds)
+    Returns: a task completion message (string)
+    Method: math module, ffmpeg, subprocess module
+    '''     
+    
+    split_audio_map = {}
+    count = 0
+    
+    # start from the bginning of audio and step with the length of desired interval (sec)
+    for i in range(0, math.ceil(float(duration)), interval):
+        
+        start = i
+        end = i + interval
+        
+        # name the splitted portion (e.g. 'part_0_30.mp3')
+        split_file = f"{audio_name[:-4:]}_part{count}_{start}_{end}.mp3"
+        
+        # ffmpeg command for splitting one portion and copying into the desired directory
+        command = f"ffmpeg -ss {start} -i {audio_name} -t {interval} -c copy {copy_directory}/{split_file}"
+        
+        # keep track of files
+        split_audio_map[count] = split_file
+        count += 1
+        subprocess.call(command, shell=True) 
+        
+    print(f"\n>>>> '{audio_name}' was converted to {count} audio files successfully.\n>>>> Files can be found in {copy_directory}.\n")
+
+
 
 
 
