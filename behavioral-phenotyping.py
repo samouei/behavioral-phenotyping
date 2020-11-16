@@ -6,6 +6,7 @@ import os
 from pydub.utils import mediainfo
 import subprocess
 import math
+import speech_recognition as sr
 
 
 # 1.
@@ -111,6 +112,56 @@ def split_audio(audio_name, duration, copy_directory, interval):
         
     print(f"\n>>>> '{audio_name}' was converted to {count} audio files successfully.\n>>>> Files can be found in {copy_directory}.\n")
 
+
+
+# 3.
+#### Calling Speech_to_Text API ####        
+def call_speech_to_text_API(audio_name, cloud = False, api_key = None):
+    '''
+    Sends audio and receives text transcription 
+        from the Google Speech-to-Text API service.
+    Input: audio_name.wav as a string
+           cloud bool (optional)
+           api_key string
+    Returns: a text transcription (string)
+    Method: speech_recognition
+    '''          
+        
+    r = sr.Recognizer() 
+    my_audio = sr.AudioFile(audio_name)
+    
+    # open file, read content, and store data in an AudioFile instance
+    with my_audio as source:
+        
+        # adjust for ambient noise
+        r.adjust_for_ambient_noise(source) 
+        '''
+        reads the first second of the file stream and calibrates the recognizer 
+        to the noise level of the audio. Hence, that portion of the stream is consumed 
+        before you call record() to capture the data
+        '''
+        #r.adjust_for_ambient_noise(source, duration=0.5) # to take care of the missing 1 second issue from line above
+        
+        audio = r.record(source)  
+        
+    if cloud:
+        # open credentials JSON file
+        with open({api_key}) as f:
+            GOOGLE_CLOUD_SPEECH_CREDENTIALS = f.read()
+                
+        try:
+            # authenticate call to Google Cloud API and transcribe
+            return r.recognize_google_cloud(audio, credentials_json=GOOGLE_CLOUD_SPEECH_CREDENTIALS)
+        except sr.UnknownValueError:
+            print("Speech is unintelligible.")
+        except sr.RequestError:
+            print("Speech recognition operation failed. Check credentials and Internet connection.")
+            
+    else:
+        return r.recognize_google(audio)
+    
+        # to get all transcriptions (raw API response as a JSON dictionary)
+        #return r.recognize_google(audio, show_all=True)
 
 
 
