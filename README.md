@@ -50,10 +50,10 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-* pytube
-* pydub
-* ffmpeg
-* SpeechRecognition
+* [pytube](https://pypi.org/project/pytube/)
+* [pydub](https://pypi.org/project/pydub/)
+* [ffmpeg](https://ffmpeg.org/)
+* [SpeechRecognition](https://pypi.org/project/SpeechRecognition/)
 
 
 ### Installation
@@ -78,7 +78,7 @@ pip install SpeechRecognition
 
 <!-- References -->
 ## References
-https://cloud.google.com/speech-to-text
+[Google Cloud Speech-to-Text API](https://cloud.google.com/speech-to-text) 
 
 <!-- LICENSE -->
 ## License
