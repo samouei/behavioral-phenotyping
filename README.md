@@ -23,6 +23,7 @@
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
+* [References](#references)
 * [License](#license)
 
 
@@ -38,6 +39,7 @@ Remote Behavioral Phenotyping using Natural Language Processing
 ### Built With
 
 * Python
+* Google Speech_to_Text API
 
 
 
@@ -48,9 +50,10 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-* pytube
-* pydub
-* ffmpeg
+* [pytube](https://pypi.org/project/pytube/)
+* [pydub](https://pypi.org/project/pydub/)
+* [ffmpeg](https://ffmpeg.org/)
+* [SpeechRecognition](https://pypi.org/project/SpeechRecognition/)
 
 
 ### Installation
@@ -69,6 +72,13 @@ pip install pydub
 ```sh
 brew install ffmpeg
 ```
+```sh
+pip install SpeechRecognition
+```
+
+<!-- References -->
+## References
+[Google Cloud Speech-to-Text API](https://cloud.google.com/speech-to-text) 
 
 <!-- LICENSE -->
 ## License
