@@ -7,7 +7,7 @@ from pydub.utils import mediainfo
 import subprocess
 import math
 import speech_recognition as sr
-
+from spacy.lang.en import English
 
 # 1.
 #### Getting Video ####
@@ -163,6 +163,23 @@ def call_speech_to_text_API(audio_name, cloud = False, api_key = None):
         # to get all transcriptions (raw API response as a JSON dictionary)
         #return r.recognize_google(audio, show_all=True)
 
+
+# 4.
+#### Text Preprocessing ####    
+def tokenizer(text):
+    '''
+    Tokenize text (non-destructive tokenization).
+    Input: text as a string
+    Returns: spaCy Doc object (iterable sequence) 
+    Method: spaCy
+    '''     
+    
+    # create a spaCy nlp object
+    nlp = English()
+    
+    # annotate/tokenize text
+    doc = nlp(text)
+    return doc  
 
 
 
