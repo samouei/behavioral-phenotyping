@@ -166,20 +166,26 @@ def call_speech_to_text_API(audio_name, cloud = False, api_key = None):
 
 # 4.
 #### Text Preprocessing ####    
-def tokenizer(text):
+def tokenizer(text, lst = False):
     '''
     Tokenize text (non-destructive tokenization).
     Input: text as a string
+           lst bool (optional)        
     Returns: spaCy Doc object (iterable sequence) 
+             list (optional)   
     Method: spaCy
     '''     
+    # from spacy.lang.en import English
     
     # create a spaCy nlp object
     nlp = English()
     
     # annotate/tokenize text
     doc = nlp(text)
-    return doc  
-
+    
+    if lst:
+        return [i.text for i in doc]
+    else:
+        return doc 
 
 
