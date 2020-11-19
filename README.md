@@ -54,6 +54,8 @@ To get a local copy up and running follow these simple steps.
 * [pydub](https://pypi.org/project/pydub/)
 * [ffmpeg](https://ffmpeg.org/)
 * [SpeechRecognition](https://pypi.org/project/SpeechRecognition/)
+* [spaCy](https://spacy.io/)
+
 
 
 ### Installation
@@ -75,6 +77,10 @@ brew install ffmpeg
 ```sh
 pip install SpeechRecognition
 ```
+```sh
+pip install -U spacy
+```
+
 
 <!-- References -->
 ## References
