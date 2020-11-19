@@ -169,7 +169,7 @@ def call_speech_to_text_API(audio_name, cloud = False, api_key = None):
 #### Text Preprocessing ####    
 def tokenizer(text, lst = False):
     '''
-    Tokenize text (non-destructive tokenization).
+    Tokenizes text (non-destructive tokenization).
     Input: text as a string
            lst bool (optional)        
     Returns: spaCy Doc object (iterable sequence) 
@@ -211,5 +211,17 @@ def stemmer(doc):
 
     snowball = SnowballStemmer(language='english') 
     return [snowball.stem(doc[i]) for i in range(len(doc))]
+
+
+def preprocess_text(text):
+    '''
+    Preprocesses text through tokenization and lemmatization. 
+    Input: text as a string
+    Returns: string 
+    Method: N/A
+    ''' 
+    
+    token_list = tokenizer(text)
+    return " ".join(lemmatizer(token_list)) 
 
 
