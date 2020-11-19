@@ -8,6 +8,7 @@ import subprocess
 import math
 import speech_recognition as sr
 from spacy.lang.en import English
+from nltk.stem.snowball import SnowballStemmer
 
 # 1.
 #### Getting Video ####
@@ -175,7 +176,6 @@ def tokenizer(text, lst = False):
              list (optional)   
     Method: spaCy
     '''     
-    # from spacy.lang.en import English
     
     # create a spaCy nlp object
     nlp = English()
@@ -187,5 +187,29 @@ def tokenizer(text, lst = False):
         return [i.text for i in doc]
     else:
         return doc 
+
+    
+def lemmatizer(doc):
+    '''
+    Lemmatizes tokens.
+    Input: spaCy Doc object
+    Returns: list 
+    Method: N/A
+    ''' 
+    # get lemmatized form of each token
+    return [token.lemma_ for token in doc]
+
+
+def stemmer(doc):
+    '''
+    Creates stems for each token. 
+        Also converts all tokens to lowercase.
+    Input: spaCy Doc object
+    Returns: list 
+    Method: nltk
+    ''' 
+
+    snowball = SnowballStemmer(language='english') 
+    return [snowball.stem(doc[i]) for i in range(len(doc))]
 
 
