@@ -43,6 +43,7 @@ Remote Behavioral Phenotyping using Natural Language Processing
 
 
 
+
 <!-- GETTING STARTED -->
 ## Getting Started
 
@@ -55,6 +56,7 @@ To get a local copy up and running follow these simple steps.
 * [ffmpeg](https://ffmpeg.org/)
 * [SpeechRecognition](https://pypi.org/project/SpeechRecognition/)
 * [spaCy](https://spacy.io/)
+* [NLTK](https://www.nltk.org/index.html)
 
 
 
@@ -79,6 +81,9 @@ pip install SpeechRecognition
 ```
 ```sh
 pip install -U spacy
+```
+```sh
+pip install nltk
 ```
 
 
