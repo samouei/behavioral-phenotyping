@@ -57,6 +57,8 @@ To get a local copy up and running follow these simple steps.
 * [SpeechRecognition](https://pypi.org/project/SpeechRecognition/)
 * [spaCy](https://spacy.io/)
 * [NLTK](https://www.nltk.org/index.html)
+* [scikit-learn](https://pypi.org/project/scikit-learn/)
+
 
 
 
@@ -84,6 +86,9 @@ pip install -U spacy
 ```
 ```sh
 pip install nltk
+```
+```sh
+pip install scikit-learn
 ```
 
 
