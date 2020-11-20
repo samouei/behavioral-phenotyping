@@ -9,6 +9,8 @@ import math
 import speech_recognition as sr
 from spacy.lang.en import English
 from nltk.stem.snowball import SnowballStemmer
+from sklearn.feature_extraction.text import CountVectorizer
+
 
 # 1.
 #### Getting Video ####
@@ -196,6 +198,7 @@ def lemmatizer(doc):
     Returns: list 
     Method: N/A
     ''' 
+    
     # get lemmatized form of each token
     return [token.lemma_ for token in doc]
 
@@ -223,5 +226,26 @@ def preprocess_text(text):
     
     token_list = tokenizer(text)
     return " ".join(lemmatizer(token_list)) 
+
+
+def vectorize_text(text, max_features = None, max_df = 1.0, min_df = 1):
+    '''
+    Converts a collection of text documents to a matrix of token counts. 
+    Input: text list of documents (strings)
+           max_features int (optional) 
+           max_df float in range [0.0, 1.0] or int (optional)
+           min_df float in range [0.0, 1.0] or int (optional)
+    Returns: sparse document term matrix of shape (n_samples, n_features)
+    Method: sklearn
+    ''' 
+    
+    global cv 
+    # initialize CountVectorizer object
+    cv = CountVectorizer(preprocessor = preprocess_text, max_features = max_features, max_df = max_df, min_df = min_df) 
+    
+    # convert the documents into a document-term matrix
+    count_vector = cv.fit_transform(text)
+    
+    return count_vector
 
 
