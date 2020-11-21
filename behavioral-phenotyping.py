@@ -228,10 +228,11 @@ def preprocess_text(text):
     return " ".join(lemmatizer(token_list)) 
 
 
-def vectorize_text(text, max_features = None, max_df = 1.0, min_df = 1):
+def vectorize_text(text, ngram_range = (1, 1), max_features = None, max_df = 1.0, min_df = 1):
     '''
     Converts a collection of text documents to a matrix of token counts. 
     Input: text list of documents (strings)
+           n_gram tuple (min_n, max_n) (optional)
            max_features int (optional) 
            max_df float in range [0.0, 1.0] or int (optional)
            min_df float in range [0.0, 1.0] or int (optional)
@@ -241,11 +242,23 @@ def vectorize_text(text, max_features = None, max_df = 1.0, min_df = 1):
     
     global cv 
     # initialize CountVectorizer object
-    cv = CountVectorizer(preprocessor = preprocess_text, max_features = max_features, max_df = max_df, min_df = min_df) 
+    cv = CountVectorizer(preprocessor = preprocess_text, ngram_range = ngram_range, max_features = max_features, max_df = max_df, min_df = min_df) 
     
     # convert the documents into a document-term matrix
     count_vector = cv.fit_transform(text)
     
     return count_vector
+
+
+def stop_words():
+    '''
+    Gives the stop words inferred by CountVectorizer from 
+        min_df, max_df, and max_features settings.
+    Input: N/A (vectorize_text must be defined before using stop_words)
+    Returns: set
+    Method: N/A
+    ''' 
+    
+    return cv.stop_words_
 
 
