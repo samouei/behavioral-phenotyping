@@ -244,6 +244,7 @@ def vectorize_text(text, ngram_range = (1, 1), max_features = None, max_df = 1.0
     # initialize CountVectorizer object
     cv = CountVectorizer(preprocessor = preprocess_text, ngram_range = ngram_range, max_features = max_features, max_df = max_df, min_df = min_df) 
     
+    global count_vector
     # convert the documents into a document-term matrix
     count_vector = cv.fit_transform(text)
     
@@ -261,4 +262,14 @@ def stop_words():
     
     return cv.stop_words_
 
+
+def array_representation():
+    '''
+    Gives a dense ndarray representation of the CountVectorizer matrix.
+    Input: N/A (vectorize_text must be defined before using array_representation)
+    Returns: numpy ndarray
+    Method: N/A
+    '''
+    
+    return count_vector.toarray()
 
