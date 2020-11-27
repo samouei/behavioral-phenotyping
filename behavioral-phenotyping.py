@@ -71,9 +71,9 @@ def video_to_audio(video_name, audio_name):
     '''
     Extracts audio from video and .
     Input: video_name.mp4 as a string.
-           audio_name.mp3 as a string
+           audio_name.flac as a string
     Returns: a task completion message (string)
-    Method: ffmpeg, subprocess module
+    Method: ffmpeg, subprocess 
     '''    
     
     command = f"ffmpeg -i" + " " + video_name + " " + audio_name
