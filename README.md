@@ -34,7 +34,9 @@
 ## About The Project
 
 Remote Behavioral Phenotyping using Natural Language Processing
-
+<p align="center">
+<img src="Images/Behavioral_Diagrams.svg" width="680" height="400">
+</p>
 
 
 ### Built With
