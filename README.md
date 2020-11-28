@@ -2,7 +2,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-
+  <img src="Images/psychology.png" width="160" height="160">
   <h1 align="center">Behavioral Phenotyping</h1>
 
   <p align="center">
