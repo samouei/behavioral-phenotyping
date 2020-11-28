@@ -101,6 +101,6 @@ pip install scikit-learn
 ## License
 
 Distributed under the MIT License. <br/>
-Icons made by <a href="https://flat-icons.com/" title="Flat Icons"> Flat Icons </a>. 
+Icons made by <a href="https://flat-icons.com/" title="Flat Icons"> Flat Icons.</a> 
 
 
