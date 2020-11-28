@@ -2,6 +2,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
+  <img src="Images/psychology.png" width="160" height="160">
 
   <h1 align="center">Behavioral Phenotyping</h1>
 
@@ -99,6 +100,7 @@ pip install scikit-learn
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License. <br/>
+Icons made by <a href="https://flat-icons.com/" title="Flat Icons"> Flat Icons.</a> 
 
 
