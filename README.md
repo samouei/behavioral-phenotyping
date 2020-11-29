@@ -13,8 +13,7 @@
     <br />
   </p>
 </p>
-
-
+<img src="https://img.shields.io/badge/repo%20status-WIP-ffea92.svg?style=flat-square" alt="made with python">
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
@@ -35,7 +34,7 @@
 
 Remote Behavioral Phenotyping using Natural Language Processing
 <p align="center">
-<img src="Images/Behavioral_Diagrams.svg" width="680" height="400">
+<img src="Images/Behavioral_Diagrams.svg" width="765" height="450">
 </p>
 
 
